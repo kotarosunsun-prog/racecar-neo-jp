@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460" font-family="Noto Sans CJK JP, sans-serif">
+  <defs>
+    <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1C7ED6"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#868E96"/>
+    </marker>
+  </defs>
+  <rect width="760" height="460" fill="#FFFFFF"/>
+
+  <!-- wires -->
+  <g stroke="#212529" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M180 196 V100 H330"/>
+    <path d="M420 100 H580 V212"/>
+    <path d="M580 268 V340 H180 V220"/>
+  </g>
+
+  <!-- battery: long plate (+) on top, short thick plate (-) below -->
+  <line x1="145" y1="196" x2="215" y2="196" stroke="#212529" stroke-width="4"/>
+  <line x1="162" y1="220" x2="198" y2="220" stroke="#212529" stroke-width="10"/>
+  <text x="226" y="202" font-size="24" fill="#D9480F" font-weight="700">＋</text>
+  <text x="226" y="232" font-size="24" fill="#D9480F" font-weight="700">−</text>
+  <text x="40" y="214" font-size="19" fill="#212529">電池</text>
+  <text x="40" y="238" font-size="15" fill="#495057">（電源）</text>
+
+  <!-- switch (closed) -->
+  <circle cx="336" cy="100" r="6" fill="#FFFFFF" stroke="#212529" stroke-width="3"/>
+  <circle cx="414" cy="100" r="6" fill="#FFFFFF" stroke="#212529" stroke-width="3"/>
+  <line x1="341" y1="98" x2="409" y2="98" stroke="#212529" stroke-width="4" stroke-linecap="round"/>
+  <text x="344" y="80" font-size="16" fill="#495057">スイッチ</text>
+
+  <!-- bulb -->
+  <circle cx="580" cy="240" r="28" fill="#FFF9DB" stroke="#212529" stroke-width="4"/>
+  <line x1="560" y1="220" x2="600" y2="260" stroke="#212529" stroke-width="3"/>
+  <line x1="600" y1="220" x2="560" y2="260" stroke="#212529" stroke-width="3"/>
+  <text x="622" y="236" font-size="19" fill="#212529">豆電球</text>
+  <text x="622" y="260" font-size="15" fill="#495057">（負荷）</text>
+
+  <!-- conventional current: clockwise, outside the loop -->
+  <g stroke="#1C7ED6" stroke-width="3.5" fill="none" marker-end="url(#ab)">
+    <path d="M150 170 V130"/>
+    <path d="M220 70 H300"/>
+    <path d="M460 70 H540"/>
+    <path d="M612 150 V195"/>
+    <path d="M500 372 H420"/>
+    <path d="M300 372 H220"/>
+    <path d="M150 300 V255"/>
+  </g>
+
+  <!-- electron flow: counter-clockwise, inside the loop -->
+  <g stroke="#868E96" stroke-width="2.5" fill="none" stroke-dasharray="7 5" marker-end="url(#ag)">
+    <path d="M330 130 H260"/>
+    <path d="M520 130 H440"/>
+    <path d="M540 300 V180"/>
+    <path d="M300 310 H400"/>
+    <path d="M290 160 V290"/>
+  </g>
+
+  <!-- legend -->
+  <line x1="120" y1="420" x2="180" y2="420" stroke="#1C7ED6" stroke-width="3.5" marker-end="url(#ab)"/>
+  <text x="192" y="426" font-size="16" fill="#212529">電流の向き（＋極 → 回路 → −極）</text>
+  <line x1="460" y1="420" x2="520" y2="420" stroke="#868E96" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#ag)"/>
+  <text x="532" y="426" font-size="16" fill="#212529">電子が実際に動く向き</text>
+</svg>
