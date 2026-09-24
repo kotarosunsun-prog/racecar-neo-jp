@@ -18,4 +18,7 @@ chapters:
   - ch3-0-intro
   - ch3-1-frames-and-time
   - ch3-2-manual-control
+  - ch4-0-intro
+  - ch4-1-command-queue
+  - ch4-2-open-loop
   - ch9-2-ohms-law
