@@ -5,4 +5,8 @@ published: false
 price: 0
 chapters:
   - ch0-1-introduction
+  - ch1-0-intro
+  - ch1-1-what-is-a-robot
+  - ch1-2-simulator-setup
+  - ch1-3-first-script
   - ch9-2-ohms-law
