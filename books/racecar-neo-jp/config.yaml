@@ -1,8 +1,0 @@
-title: "自律走行ミニカーで学ぶロボティクス入門 — MIT BWSI RACECAR Neo 教材 日本語版（非公式）"
-summary: "MIT Beaver Works Summer Institute（BWSI）の自律走行ミニカー「RACECAR Neo」の教材を、日本の中高生向けに日本語で組み立て直した非公式の解説書です。オンライン事前コースの9章に沿って、シミュレータで車を動かしながら、PID 制御、LIDAR による壁沿い走行、機械学習までを学びます。"
-topics: ["robotics", "python", "ros2", "electronics", "beginners"]
-published: false
-price: 0
-chapters:
-  - ch0-1-introduction
-  - ch9-2-ohms-law
