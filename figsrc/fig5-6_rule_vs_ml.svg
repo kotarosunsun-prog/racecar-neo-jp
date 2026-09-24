@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="430" viewBox="0 0 920 430" font-family="Noto Sans CJK JP, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker>
+    <style>.t{font-size:19px;font-weight:700}.b{font-size:16px;font-weight:700;fill:#212529}.s{font-size:13px;fill:#495057}.ln{stroke:#495057;stroke-width:2.5;fill:none}</style>
+  </defs>
+  <rect width="920" height="430" fill="#FFFFFF"/>
+  <!-- rule based -->
+  <rect x="16" y="14" width="888" height="170" rx="16" fill="#F1F3F5" stroke="#CED4DA" stroke-width="2"/>
+  <text x="36" y="46" class="t" fill="#495057">これまで：人がルールを書く（Lab E など）</text>
+  <rect x="50" y="70" width="200" height="80" rx="12" fill="#FFFFFF" stroke="#ADB5BD" stroke-width="2"/>
+  <text x="150" y="104" class="b" text-anchor="middle">人が考えたルール</text>
+  <text x="150" y="128" class="s" text-anchor="middle">「H が 90〜120 なら青」</text>
+  <rect x="360" y="70" width="200" height="80" rx="12" fill="#FFFFFF" stroke="#ADB5BD" stroke-width="2"/>
+  <text x="460" y="104" class="b" text-anchor="middle">プログラム</text>
+  <text x="460" y="128" class="s" text-anchor="middle">ルールをそのまま書く</text>
+  <rect x="670" y="70" width="200" height="80" rx="12" fill="#FFFFFF" stroke="#ADB5BD" stroke-width="2"/>
+  <text x="770" y="104" class="b" text-anchor="middle">答え</text>
+  <text x="770" y="128" class="s" text-anchor="middle">「これは青」</text>
+  <line x1="252" y1="110" x2="356" y2="110" class="ln" marker-end="url(#ar)"/>
+  <line x1="562" y1="110" x2="666" y2="110" class="ln" marker-end="url(#ar)"/>
+  <text x="460" y="174" class="s" text-anchor="middle">色の箱なら書けるが、「コーン」「人」「止まれの標識」のルールは書ききれない</text>
+  <!-- machine learning -->
+  <rect x="16" y="200" width="888" height="216" rx="16" fill="#EBFBEE" stroke="#8CE99A" stroke-width="2"/>
+  <text x="36" y="232" class="t" fill="#2B8A3E">機械学習：データからルールを見つけさせる</text>
+  <rect x="50" y="254" width="200" height="86" rx="12" fill="#FFFFFF" stroke="#ADB5BD" stroke-width="2"/>
+  <text x="150" y="286" class="b" text-anchor="middle">たくさんの例</text>
+  <text x="150" y="308" class="s" text-anchor="middle">入力と、その正解</text>
+  <text x="150" y="327" class="s" text-anchor="middle">（写真と「これはコーン」）</text>
+  <rect x="360" y="254" width="200" height="86" rx="12" fill="#FFFFFF" stroke="#2B8A3E" stroke-width="2.5"/>
+  <text x="460" y="286" class="b" text-anchor="middle">学習</text>
+  <text x="460" y="308" class="s" text-anchor="middle">間違いが少なくなるように</text>
+  <text x="460" y="327" class="s" text-anchor="middle">モデルの数を調整する</text>
+  <rect x="670" y="254" width="200" height="86" rx="12" fill="#FFFFFF" stroke="#2B8A3E" stroke-width="2.5"/>
+  <text x="770" y="286" class="b" text-anchor="middle">学習したモデル</text>
+  <text x="770" y="308" class="s" text-anchor="middle">見たことのない入力にも</text>
+  <text x="770" y="327" class="s" text-anchor="middle">答えを出す（推論）</text>
+  <line x1="252" y1="297" x2="356" y2="297" class="ln" marker-end="url(#ar)"/>
+  <line x1="562" y1="297" x2="666" y2="297" class="ln" marker-end="url(#ar)"/>
+  <text x="460" y="392" class="s" text-anchor="middle">人が書くのは「どう学ぶか」まで。「どう見分けるか」は、データから見つける</text>
+</svg>

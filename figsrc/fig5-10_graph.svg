@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" font-family="Noto Sans CJK JP, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1C7ED6"/></marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#E03131"/></marker>
+    <style>.b{font-size:17px;font-weight:700;fill:#212529}.s{font-size:13px;fill:#495057}.m{font-size:15px;font-family:"DejaVu Sans Mono",monospace;fill:#212529}.f{font-size:14px;font-family:"DejaVu Sans Mono",monospace;fill:#1864AB;font-weight:700}.g{font-size:14px;font-family:"DejaVu Sans Mono",monospace;fill:#C92A2A;font-weight:700}.lf{stroke:#1C7ED6;stroke-width:2.4;fill:none}.lb{stroke:#E03131;stroke-width:2;fill:none;stroke-dasharray:6 4}</style>
+  </defs>
+  <rect width="940" height="400" fill="#FFFFFF"/>
+  <text x="24" y="32" class="b">計算グラフ：1つのニューロンと損失（x = 1.0, w = 0.5, b = −0.2, 正解 y = 1）</text>
+  <!-- leaves -->
+  <rect x="24" y="80" width="84" height="44" rx="10" fill="#E7F5FF" stroke="#74C0FC" stroke-width="2"/><text x="66" y="108" class="m" text-anchor="middle">w=0.5</text>
+  <rect x="24" y="160" width="84" height="44" rx="10" fill="#E7F5FF" stroke="#74C0FC" stroke-width="2"/><text x="66" y="188" class="m" text-anchor="middle">x=1.0</text>
+  <rect x="24" y="240" width="84" height="44" rx="10" fill="#E7F5FF" stroke="#74C0FC" stroke-width="2"/><text x="66" y="268" class="m" text-anchor="middle">b=−0.2</text>
+  <!-- ops -->
+  <circle cx="220" cy="142" r="30" fill="#FFF4E6" stroke="#FFC078" stroke-width="2.5"/><text x="220" y="149" class="m" text-anchor="middle">×</text>
+  <circle cx="370" cy="200" r="30" fill="#FFF4E6" stroke="#FFC078" stroke-width="2.5"/><text x="370" y="207" class="m" text-anchor="middle">＋</text>
+  <rect x="490" y="172" width="90" height="56" rx="12" fill="#EBFBEE" stroke="#8CE99A" stroke-width="2.5"/><text x="535" y="207" class="m" text-anchor="middle">σ</text>
+  <rect x="690" y="172" width="120" height="56" rx="12" fill="#FFF5F5" stroke="#FF8787" stroke-width="2.5"/><text x="750" y="200" class="m" text-anchor="middle">(a − y)²</text><text x="750" y="220" class="s" text-anchor="middle">損失</text>
+  <!-- forward edges -->
+  <line x1="108" y1="104" x2="192" y2="132" class="lf" marker-end="url(#ar)"/>
+  <line x1="108" y1="180" x2="192" y2="152" class="lf" marker-end="url(#ar)"/>
+  <line x1="248" y1="154" x2="342" y2="190" class="lf" marker-end="url(#ar)"/>
+  <line x1="108" y1="260" x2="342" y2="210" class="lf" marker-end="url(#ar)"/>
+  <line x1="400" y1="200" x2="486" y2="200" class="lf" marker-end="url(#ar)"/>
+  <line x1="580" y1="200" x2="686" y2="200" class="lf" marker-end="url(#ar)"/>
+  <line x1="810" y1="200" x2="880" y2="200" class="lf" marker-end="url(#ar)"/>
+  <!-- forward values -->
+  <text x="292" y="160" class="f">0.5</text>
+  <text x="426" y="190" class="f">z=0.3</text>
+  <text x="598" y="190" class="f">a=0.574</text>
+  <text x="826" y="190" class="f">L=0.181</text>
+  <!-- backward -->
+  <path d="M750 232 C 750 300, 640 300, 600 300" class="lb" marker-end="url(#ab)"/>
+  <text x="646" y="322" class="g">∂L/∂a = 2(a−y) = −0.851</text>
+  <path d="M530 232 C 520 330, 430 340, 400 330" class="lb" marker-end="url(#ab)"/>
+  <text x="380" y="368" class="g">∂L/∂z = −0.851 × a(1−a) = −0.208</text>
+  <path d="M340 214 C 280 250, 200 290, 150 300" class="lb" marker-end="url(#ab)"/>
+  <text x="130" y="330" class="g">∂L/∂b = −0.208 × 1</text>
+  <path d="M348 180 C 300 110, 180 70, 130 80" class="lb" marker-end="url(#ab)"/>
+  <text x="140" y="62" class="g">∂L/∂w = −0.208 × x = −0.208</text>
+  <text x="620" y="110" class="s">青：前向き（値を計算する）</text>
+  <text x="620" y="132" class="s">赤：後ろ向き（傾きを、かけながら戻す）</text>
+</svg>

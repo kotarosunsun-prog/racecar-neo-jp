@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="300" viewBox="0 0 920 300" font-family="Noto Sans CJK JP, sans-serif">
+  <style>.b{font-size:17px;font-weight:700;fill:#212529}.s{font-size:14px;fill:#495057}.m{font-size:22px;fill:#212529}</style>
+  <rect width="920" height="300" fill="#FFFFFF"/>
+  <text x="24" y="34" class="b">IoU：2つの枠がどれだけ重なっているか（0〜1）</text>
+  <rect x="60" y="70" width="170" height="150" fill="#D0EBFF" stroke="#1C7ED6" stroke-width="3" fill-opacity="0.6"/>
+  <rect x="140" y="120" width="170" height="150" fill="#FFE8CC" stroke="#E8590C" stroke-width="3" fill-opacity="0.6"/>
+  <rect x="140" y="120" width="90" height="100" fill="#AE3EC9" fill-opacity="0.45"/>
+  <text x="70" y="94" class="s">予想の枠</text>
+  <text x="236" y="262" class="s">正解の枠</text>
+  <text x="400" y="120" class="m">IoU =</text>
+  <rect x="470" y="86" width="120" height="44" fill="#AE3EC9" fill-opacity="0.45" rx="6"/>
+  <text x="530" y="114" class="s" text-anchor="middle">重なった部分</text>
+  <line x1="466" y1="146" x2="880" y2="146" stroke="#212529" stroke-width="2"/>
+  <rect x="470" y="160" width="120" height="44" fill="#D0EBFF" rx="6" stroke="#1C7ED6"/>
+  <text x="530" y="188" class="s" text-anchor="middle">予想の枠</text>
+  <text x="604" y="190" class="m">＋</text>
+  <rect x="632" y="160" width="120" height="44" fill="#FFE8CC" rx="6" stroke="#E8590C"/>
+  <text x="692" y="188" class="s" text-anchor="middle">正解の枠</text>
+  <text x="764" y="190" class="m">−</text>
+  <rect x="790" y="160" width="90" height="44" fill="#AE3EC9" fill-opacity="0.45" rx="6"/>
+  <text x="835" y="188" class="s" text-anchor="middle">重なり</text>
+  <text x="400" y="250" class="s">ぴったり同じなら 1、まったく重ならなければ 0。</text>
+  <text x="400" y="274" class="s">評価では「IoU が 0.5 以上なら当たり」のように使う。</text>
+</svg>
