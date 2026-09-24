@@ -21,4 +21,19 @@ chapters:
   - ch4-0-intro
   - ch4-1-command-queue
   - ch4-2-open-loop
+  - ch5-0-intro
+  - ch5-1-camera-hsv
+  - ch5-2-stoplight
+  - ch5-3-lidar-scan
+  - ch5-4-ar-markers
+  - ch5-5-imu
+  - ch5-6-what-is-ml
+  - ch5-7-regression-loss
+  - ch5-8-gradient-descent
+  - ch5-9-neural-network
+  - ch5-10-backprop
+  - ch5-11-object-detection
+  - ch5-12-collect-data
+  - ch5-13-annotation
+  - ch5-14-train-edgetpu
   - ch9-2-ohms-law
