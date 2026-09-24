@@ -15,4 +15,7 @@ chapters:
   - ch2-3-sensors
   - ch2-4-hardware
   - ch2-5-ros2
+  - ch3-0-intro
+  - ch3-1-frames-and-time
+  - ch3-2-manual-control
   - ch9-2-ohms-law
