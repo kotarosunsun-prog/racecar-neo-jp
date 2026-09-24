@@ -9,4 +9,10 @@ chapters:
   - ch1-1-what-is-a-robot
   - ch1-2-simulator-setup
   - ch1-3-first-script
+  - ch2-0-intro
+  - ch2-1-if-and-controller
+  - ch2-2-pressed-and-held
+  - ch2-3-sensors
+  - ch2-4-hardware
+  - ch2-5-ros2
   - ch9-2-ohms-law
