@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="300" viewBox="0 0 940 300" font-family="Noto Sans CJK JP, sans-serif">
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker>
+  <style>.b{font-size:16px;font-weight:700;fill:#212529}.s{font-size:13px;fill:#495057}.m{font-size:14px;font-family:"DejaVu Sans Mono",monospace;fill:#1864AB}.ln{stroke:#495057;stroke-width:2.4;fill:none}</style></defs>
+  <rect width="940" height="300" fill="#FFFFFF"/>
+  <rect x="20" y="60" width="130" height="64" rx="12" fill="#F8F9FA" stroke="#ADB5BD" stroke-width="2"/>
+  <text x="85" y="88" class="b" text-anchor="middle">目標</text><text x="85" y="110" class="s" text-anchor="middle">TARGET = 50 cm</text>
+  <circle cx="220" cy="92" r="24" fill="#FFF4E6" stroke="#FFC078" stroke-width="2.5"/>
+  <text x="220" y="99" font-size="20" text-anchor="middle" fill="#D9480F">−</text>
+  <line x1="150" y1="92" x2="192" y2="92" class="ln" marker-end="url(#ar)"/>
+  <line x1="244" y1="92" x2="336" y2="92" class="ln" marker-end="url(#ar)"/>
+  <text x="290" y="80" class="s" text-anchor="middle">ずれ e</text>
+  <rect x="340" y="60" width="150" height="64" rx="12" fill="#EBFBEE" stroke="#2F9E44" stroke-width="2.5"/>
+  <text x="415" y="88" class="b" text-anchor="middle">× KP</text><text x="415" y="110" class="s" text-anchor="middle">ずれに比例</text>
+  <line x1="490" y1="92" x2="582" y2="92" class="ln" marker-end="url(#ar)"/>
+  <text x="536" y="80" class="s" text-anchor="middle">speed</text>
+  <rect x="586" y="60" width="130" height="64" rx="12" fill="#FFFFFF" stroke="#ADB5BD" stroke-width="2"/>
+  <text x="651" y="88" class="b" text-anchor="middle">車</text><text x="651" y="110" class="s" text-anchor="middle">進む・止まる</text>
+  <line x1="716" y1="92" x2="800" y2="92" class="ln"/>
+  <path d="M800 92 L 800 210 L 716 210" class="ln" marker-end="url(#ar)"/>
+  <rect x="586" y="178" width="130" height="64" rx="12" fill="#E7F5FF" stroke="#74C0FC" stroke-width="2"/>
+  <text x="651" y="206" class="b" text-anchor="middle">LIDAR</text><text x="651" y="228" class="s" text-anchor="middle">壁までの距離</text>
+  <path d="M586 210 L 220 210 L 220 120" class="ln" marker-end="url(#ar)"/>
+  <text x="400" y="200" class="s" text-anchor="middle">測った距離 front</text>
+  <text x="20" y="276" class="m">error = front − TARGET 　　speed = KP × error　（−1〜1 に収める）</text>
+  <text x="815" y="150" class="s">毎コマ</text><text x="815" y="168" class="s">くり返す</text>
+</svg>
