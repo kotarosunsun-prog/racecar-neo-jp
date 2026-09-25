@@ -36,4 +36,28 @@ chapters:
   - ch5-12-collect-data
   - ch5-13-annotation
   - ch5-14-train-edgetpu
+  - ch6-0-intro
+  - ch6-1-p-control
+  - ch6-2-line-follow
+  - ch6-3-ar-direction
+  - ch6-4-wall-follow-intro
+  - ch6-5-wall-distance
+  - ch6-6-robust-distance
+  - ch6-7-wall-p
+  - ch6-8-observe-oscillation
+  - ch6-9-wall-pd
+  - ch6-10-wall-angle
+  - ch6-11-wall-i
+  - ch6-12-pid-class
+  - ch6-13-evaluate-response
+  - ch6-14-tuning
+  - ch6-15-look-ahead
+  - ch6-16-center
+  - ch6-17-states
+  - ch6-18-narrow-wide-sharp
+  - ch6-19-speed
+  - ch6-20-time-attack
+  - ch6-21-reuse-pid
+  - ch6-22-auto-tuning
+  - ch6-23-imitation
   - ch9-2-ohms-law
