@@ -60,4 +60,27 @@ chapters:
   - ch6-21-reuse-pid
   - ch6-22-auto-tuning
   - ch6-23-imitation
-  - ch9-2-ohms-law
+  - ch7-0-intro
+  - ch7-1-safety-stop
+  - ch7-2-state-machine
+  - ch7-3-cone-parking
+  - ch7-4-slalom
+  - ch7-5-farthest-point
+  - ch7-6-view-window
+  - ch7-7-find-gaps
+  - ch7-8-choose-gap
+  - ch7-9-bubble
+  - ch7-10-disparity
+  - ch7-11-gap-speed
+  - ch7-12-compare
+  - ch7-13-combine
+  - ch8-0-intro
+  - ch8-1-integration
+  - ch8-2-tuning
+  - ch8-3-bike-exercise
+  - ch9-0-intro
+  - ch9-1-sim-vs-real
+  - ch9-2-battery-monitor
+  - ch9-3-real-lidar
+  - ch9-4-real-tuning
+  - ch9-5-real-vision
