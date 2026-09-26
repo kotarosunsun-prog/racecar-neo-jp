@@ -18,7 +18,7 @@ if __name__ == "__main__":
     res = {}
     for tag, subs in (("filtered", []), ("naive", NAIVE)):
         for seed in range(5):
-            w = C.real_like(sim2d.World(WALLS, x=0, y=0, heading_deg=90, seed=seed, **C.REAL_LIDAR))
+            w = sim2d.World(WALLS, x=0, y=0, heading_deg=90, seed=seed, **C.REAL_LIDAR)
             mv = MockVision(w, SIGNS, seed=seed)
             w, out = C.run("detect_stop.py", w, T, subs=subs, vision=mv)
             L = np.array(w.log)

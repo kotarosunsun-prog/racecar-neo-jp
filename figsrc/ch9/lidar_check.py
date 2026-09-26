@@ -27,7 +27,7 @@ def update():
 
 def update_slow():
     scan = rc.lidar.get_samples()
-    n = len(scan)                                    # シミュレータは 720、実機は 1080
+    n = len(scan)                                    # 点の数（720）
     angles = np.arange(n) * 360 / n                  # 各点の角度（度）。0 が正面、時計回り
     sector = ((angles + 22.5) // 45).astype(int) % 8  # 前（-22.5°〜22.5°）が 0、そこから時計回りに 1、2、…
     words = []

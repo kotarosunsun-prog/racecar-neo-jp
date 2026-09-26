@@ -1,11 +1,11 @@
 """Run the book's chapter 9 programs (copies in this folder) in the stand-in racecar_core (sim2d model).
-"real-like" worlds use a LIDAR with 1080 points spinning 10 times a second (the physical car's RPLIDAR)."""
+REAL_LIDAR: a LIDAR with 720 points spinning about 10 times a second (the physical car's RPLIDAR)."""
 import math, os, sys
 import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 import wallsim, sim2d                      # wallsim puts the racecar library on the path
-from sim_real import GlassWorld, real_like
+from sim_real import GlassWorld
 sys.path.insert(0, HERE)
 import racecar_core as r
 

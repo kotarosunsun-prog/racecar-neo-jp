@@ -33,7 +33,7 @@ def update_slow():
     global frames, dt_max
     scan = rc.lidar.get_samples()
     n = len(scan)
-    front = rc_utils.get_lidar_average_distance(scan, 0)        # 正面（角度で指定するので、点の数によらない）
+    front = rc_utils.get_lidar_average_distance(scan, 0)        # 正面（0° のまわりの平均）
     right = rc_utils.get_lidar_average_distance(scan, 90)
     zeros = int((scan == 0).sum())                               # 測れなかった点の数
     image = rc.camera.get_color_image()
