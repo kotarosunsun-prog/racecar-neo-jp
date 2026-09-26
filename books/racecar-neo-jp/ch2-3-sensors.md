@@ -66,15 +66,15 @@ print(image[240][320])     # 画面のまん中の画素の [青, 緑, 赤]
 
 LIDAR は、回転しながらレーザーを出して、まわり360°の壁や物までの距離を測ります。`get_samples()` が返すのは、その距離を**真正面から時計回りに**並べたものです。
 
-- 距離は **720個の小数（float）の配列**で返ってきます。シミュレータでも実機でも同じ形です
-- 点と点の間の角度は、360° ÷ 720 = **0.5°** です
-- 番号0が真正面、番号180（90°）が右、番号360（180°）が真後ろ、番号540（270°）が左です
+- 距離は、シミュレータでは **720個の小数（float）の配列**で返ってきます（実機の LIDAR は **1080個**です。9-3）
+- シミュレータでは、点と点の間の角度は、360° ÷ 720 = **0.5°** です
+- 番号0が真正面、番号180（90°）が右、番号360（180°）が真後ろ、番号540（270°）が左です（720個のとき）
 - 距離の単位は **cm** です
 - **0.0** は「測れなかった」という意味です。遠すぎる、ガラスに当たったなどで、レーザーが戻ってこなかった点です
 
 ```python
 scan = rc.lidar.get_samples()
-print(len(scan))           # 720（点の数）
+print(len(scan))           # 720（点の数。実機では 1080）
 print(scan[0])             # 真正面までの距離（cm）
 ```
 
@@ -153,7 +153,7 @@ LIDAR の点の数: 720
 
 | 項目 | シミュレータ | 実機 |
 |---|---|---|
-| LIDAR のデータの形 | 720個の小数の配列（真正面から時計回り） | 同じ |
+| LIDAR のデータの形 | 720個の小数の配列（真正面から時計回り、0.5° ごと） | 1080個の小数の配列（真正面から時計回り、約 0.33° ごと。9-3） |
 | IMU の軸の向き | シミュレータ独自の割り当て | 実機のセンサの割り当て（第5章） |
 | 地磁気 `get_magnetic_field()` | 使えない（`None` が返る） | 使える |
 | 車輪の回転の速さ `get_encoder_speed()` | 使えない（0.0 が返る） | 使える |
@@ -209,3 +209,4 @@ LIDAR と深度画像は **cm**、IMU の加速度は **m/s²** です。距離�
 - センサの API：[racecar-neo-library](https://github.com/MITRacecarNeo/racecar-neo-library) の `camera.py`・`lidar.py`・`physics.py` と、`simulation/` の各ファイル（GPL-3.0）
 - シミュレータの IMU のしくみ：[RacecarNeo-Simulator](https://github.com/MITRacecarNeo/RacecarNeo-Simulator) の `PhysicsModule.cs`
 - シミュレータの LIDAR（720個、0.5°ごと、真正面から時計回り）：[RacecarNeo-Simulator](https://github.com/MITRacecarNeo/RacecarNeo-Simulator) の `Lidar.cs`
+- 実機の LIDAR（1080個）：[racecar-neo-library](https://github.com/MITRacecarNeo/racecar-neo-library) の `real/lidar_real.py`（GPL-3.0）

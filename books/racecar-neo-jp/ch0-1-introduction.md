@@ -14,7 +14,7 @@ RACECAR は、次の英語の頭文字をとった名前です。
 > **R**apid **A**utonomous **C**omplex-**E**nvironment **C**ompeting **A**ckermann-steering **R**obot
 > （複雑な環境を速く自律走行して競い合う、アッカーマン式ステアリングのロボット）
 
-大きさは実物の車の14分の1ほどのラジコンカーです。そこに、周りを見るための**センサ**（カメラ、LIDAR、IMU）と、考えるための**コンピュータ**を載せています。人がリモコンで操縦するのではなく、自分でセンサの値を読み、自分でハンドルとアクセルを決めて走ります。
+今の RACECAR Neo（v2）は、実物の車の14分の1ほどの大きさのラジコンカーです（[RACECAR Neo v2 のドライバの説明](https://github.com/MITRacecarNeo/racecar_neo_ros2_driver)）。そこに、周りを見るための**センサ**（カメラ、LIDAR、IMU）と、考えるための**コンピュータ**を載せています。人がリモコンで操縦するのではなく、自分でセンサの値を読み、自分でハンドルとアクセルを決めて走ります。
 
 | センサ | 何がわかるか | この本で主に使う章 |
 |---|---|---|
@@ -112,7 +112,7 @@ RACECAR の始まりは、2015年1月に MIT で開かれた授業です。学�
 
 | 原典 | ライセンス | この本での扱い |
 |---|---|---|
-| 実習課題のプログラム（[racecar-neo-outreach-labs](https://github.com/MITRacecarNeo/racecar-neo-outreach-labs)） | MIT License | もとにして解説を書く |
+| 実習課題のプログラム（[racecar-neo-prereq-labs](https://github.com/MITRacecarNeo/racecar-neo-prereq-labs)） | MIT License | もとにして解説を書く |
 | RACECAR Neo のライブラリ（[racecar-neo-library](https://github.com/MITRacecarNeo/racecar-neo-library)） | GPL-3.0 | 使い方を解説する |
 | 夏のプログラムの講義資料 | 非公開 | 許諾が得られしだい、深掘りの章として追加する予定 |
 

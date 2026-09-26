@@ -337,7 +337,7 @@ PID は、積分や過去のずれの記録を持っています。インスタ�
 
 ## ⑦ 原典
 
-- Lab G の課題（コーンの 30 cm 手前に駐車する、深度カメラは使わない）：[racecar-neo-outreach-labs](https://github.com/MITRacecarNeo/racecar-neo-outreach-labs) の `labs/lab_g/lab_g.py`
+- Lab G の課題（コーンの 30 cm 手前に駐車する、深度カメラは使わない）：[racecar-neo-prereq-labs](https://github.com/MITRacecarNeo/racecar-neo-prereq-labs) の `labs/lab_g/lab_g.py`
 - Lab F と、青の色の範囲 `((90, 50, 50), (120, 255, 255))`：同じく `labs/lab_f/lab_f.py`（6-2）
 - `find_contours()`・`get_largest_contour()`・`get_contour_center()`・`crop()`・`get_lidar_closest_point()`：[racecar-neo-library](https://github.com/MITRacecarNeo/racecar-neo-library) の `racecar_utils.py`（GPL-3.0）
 
