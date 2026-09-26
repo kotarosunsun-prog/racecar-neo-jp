@@ -1,0 +1,87 @@
+[
+ {
+  "name": "W10",
+  "settings": {
+   "WALL_SPEED": "1.0"
+  },
+  "seed": 0,
+  "crashed": false,
+  "stop": 53.9,
+  "line_end": null,
+  "turn": 30.1,
+  "hall": 38.4,
+  "closest": 27.4,
+  "end": [
+   278.0,
+   4564.0
+  ]
+ },
+ {
+  "name": "W10",
+  "settings": {
+   "WALL_SPEED": "1.0"
+  },
+  "seed": 1,
+  "crashed": false,
+  "stop": 68.2,
+  "line_end": null,
+  "turn": 30.1,
+  "hall": 38.5,
+  "closest": 31.0,
+  "end": [
+   431.0,
+   4656.0
+  ]
+ },
+ {
+  "name": "W10",
+  "settings": {
+   "WALL_SPEED": "1.0"
+  },
+  "seed": 2,
+  "crashed": false,
+  "stop": 55.0,
+  "line_end": null,
+  "turn": 30.1,
+  "hall": 38.5,
+  "closest": 24.2,
+  "end": [
+   430.0,
+   4653.0
+  ]
+ },
+ {
+  "name": "W10",
+  "settings": {
+   "WALL_SPEED": "1.0"
+  },
+  "seed": 3,
+  "crashed": false,
+  "stop": 54.0,
+  "line_end": null,
+  "turn": 30.2,
+  "hall": 38.4,
+  "closest": 28.7,
+  "end": [
+   274.0,
+   4565.0
+  ]
+ },
+ {
+  "name": "W10",
+  "settings": {
+   "WALL_SPEED": "1.0"
+  },
+  "seed": 4,
+  "crashed": false,
+  "stop": 68.9,
+  "line_end": null,
+  "turn": 30.2,
+  "hall": 38.6,
+  "closest": 36.8,
+  "end": [
+   431.0,
+   4656.0
+  ]
+ }
+]

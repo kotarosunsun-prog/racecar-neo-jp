@@ -228,7 +228,8 @@ class ConeCamera:
     def render(self, world, rng=None):
         cv = self.cv
         img = np.full((480, 640, 3), 170, np.uint8); img[240:] = 140
-        for (x, y, r, height, bgr) in self.cones:
+        far_first = sorted(self.cones, key=lambda c: -math.hypot(c[0] - world.x, c[1] - world.y))
+        for (x, y, r, height, bgr) in far_first:                 # nearer cones are drawn over farther ones
             dx, dy = x - world.x, y - world.y
             dist = math.hypot(dx, dy)
             bearing = world.psi - math.atan2(dy, dx)          # > 0 : the cone is to the right

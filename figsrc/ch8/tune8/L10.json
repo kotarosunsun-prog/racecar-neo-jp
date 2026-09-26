@@ -1,0 +1,87 @@
+[
+ {
+  "name": "L10",
+  "settings": {
+   "LINE_SPEED": "1.0"
+  },
+  "seed": 0,
+  "crashed": false,
+  "stop": 73.7,
+  "line_end": null,
+  "turn": 31.0,
+  "hall": 44.1,
+  "closest": 49.1,
+  "end": [
+   429.0,
+   4651.0
+  ]
+ },
+ {
+  "name": "L10",
+  "settings": {
+   "LINE_SPEED": "1.0"
+  },
+  "seed": 1,
+  "crashed": false,
+  "stop": 71.0,
+  "line_end": null,
+  "turn": 31.0,
+  "hall": 44.1,
+  "closest": 21.4,
+  "end": [
+   275.0,
+   4565.0
+  ]
+ },
+ {
+  "name": "L10",
+  "settings": {
+   "LINE_SPEED": "1.0"
+  },
+  "seed": 2,
+  "crashed": false,
+  "stop": 71.2,
+  "line_end": null,
+  "turn": 31.0,
+  "hall": 44.1,
+  "closest": 36.8,
+  "end": [
+   265.0,
+   4566.0
+  ]
+ },
+ {
+  "name": "L10",
+  "settings": {
+   "LINE_SPEED": "1.0"
+  },
+  "seed": 3,
+  "crashed": false,
+  "stop": 73.8,
+  "line_end": null,
+  "turn": 31.0,
+  "hall": 44.1,
+  "closest": 49.9,
+  "end": [
+   429.0,
+   4650.0
+  ]
+ },
+ {
+  "name": "L10",
+  "settings": {
+   "LINE_SPEED": "1.0"
+  },
+  "seed": 4,
+  "crashed": false,
+  "stop": 72.2,
+  "line_end": null,
+  "turn": 30.9,
+  "hall": 44.1,
+  "closest": 29.6,
+  "end": [
+   384.0,
+   4590.0
+  ]
+ }
+]

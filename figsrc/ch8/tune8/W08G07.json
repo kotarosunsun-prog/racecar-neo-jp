@@ -1,0 +1,92 @@
+[
+ {
+  "name": "W08G07",
+  "settings": {
+   "WALL_SPEED": "0.8",
+   "GAP_SPEED": "0.7"
+  },
+  "seed": 0,
+  "crashed": false,
+  "stop": 59.1,
+  "line_end": null,
+  "turn": 31.8,
+  "hall": 40.9,
+  "closest": 30.4,
+  "end": [
+   328.0,
+   4565.0
+  ]
+ },
+ {
+  "name": "W08G07",
+  "settings": {
+   "WALL_SPEED": "0.8",
+   "GAP_SPEED": "0.7"
+  },
+  "seed": 1,
+  "crashed": false,
+  "stop": 60.7,
+  "line_end": null,
+  "turn": 31.7,
+  "hall": 40.8,
+  "closest": 36.8,
+  "end": [
+   167.0,
+   4663.0
+  ]
+ },
+ {
+  "name": "W08G07",
+  "settings": {
+   "WALL_SPEED": "0.8",
+   "GAP_SPEED": "0.7"
+  },
+  "seed": 2,
+  "crashed": false,
+  "stop": 59.0,
+  "line_end": null,
+  "turn": 31.7,
+  "hall": 40.8,
+  "closest": 34.6,
+  "end": [
+   272.0,
+   4565.0
+  ]
+ },
+ {
+  "name": "W08G07",
+  "settings": {
+   "WALL_SPEED": "0.8",
+   "GAP_SPEED": "0.7"
+  },
+  "seed": 3,
+  "crashed": false,
+  "stop": 59.0,
+  "line_end": null,
+  "turn": 31.8,
+  "hall": 40.9,
+  "closest": 39.2,
+  "end": [
+   271.0,
+   4565.0
+  ]
+ },
+ {
+  "name": "W08G07",
+  "settings": {
+   "WALL_SPEED": "0.8",
+   "GAP_SPEED": "0.7"
+  },
+  "seed": 4,
+  "crashed": false,
+  "stop": 58.9,
+  "line_end": null,
+  "turn": 31.8,
+  "hall": 40.8,
+  "closest": 35.7,
+  "end": [
+   266.0,
+   4566.0
+  ]
+ }
+]

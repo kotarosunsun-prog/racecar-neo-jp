@@ -1,0 +1,77 @@
+[
+ {
+  "name": "base",
+  "settings": {},
+  "seed": 0,
+  "crashed": false,
+  "stop": 81.6,
+  "line_end": 15.6,
+  "turn": 39.1,
+  "hall": 52.3,
+  "closest": 49.3,
+  "end": [
+   171.0,
+   4651.0
+  ]
+ },
+ {
+  "name": "base",
+  "settings": {},
+  "seed": 1,
+  "crashed": false,
+  "stop": 79.0,
+  "line_end": 15.6,
+  "turn": 39.1,
+  "hall": 52.2,
+  "closest": 21.3,
+  "end": [
+   275.0,
+   4565.0
+  ]
+ },
+ {
+  "name": "base",
+  "settings": {},
+  "seed": 2,
+  "crashed": false,
+  "stop": 79.0,
+  "line_end": 15.6,
+  "turn": 39.0,
+  "hall": 52.2,
+  "closest": 20.6,
+  "end": [
+   276.0,
+   4564.0
+  ]
+ },
+ {
+  "name": "base",
+  "settings": {},
+  "seed": 3,
+  "crashed": false,
+  "stop": 79.4,
+  "line_end": 15.6,
+  "turn": 39.1,
+  "hall": 52.3,
+  "closest": 22.8,
+  "end": [
+   270.0,
+   4566.0
+  ]
+ },
+ {
+  "name": "base",
+  "settings": {},
+  "seed": 4,
+  "crashed": false,
+  "stop": 79.2,
+  "line_end": 15.6,
+  "turn": 39.1,
+  "hall": 52.3,
+  "closest": 22.5,
+  "end": [
+   324.0,
+   4564.0
+  ]
+ }
+]
