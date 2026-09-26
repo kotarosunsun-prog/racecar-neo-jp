@@ -21,7 +21,7 @@ STOP_PER_SPEED = 60.0  # speed 1.0 あたり、止まるのに必要な距離（
 
 def lidar_angles(scan):
     """LIDAR の各点の角度（ラジアン）。0 が正面、時計回り。
-    点の数は len(scan) から求める（シミュレータは 720 点、実機は 1080 点。9-3）"""
+    点の数は len(scan) から求める（720 点なら 0.5° ずつ）"""
     return np.radians(np.arange(len(scan)) * 360 / len(scan))
 
 
