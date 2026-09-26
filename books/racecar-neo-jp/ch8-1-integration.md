@@ -177,7 +177,7 @@ TURN_TIME = 1.6        # 曲がり続ける時間（秒）
 
 def lidar_angles(scan):
     """LIDAR の各点の角度（ラジアン）。0 が正面、時計回り。
-    点の数は len(scan) から求める（シミュレータは 720 点、実機は 1080 点。9-3）"""
+    点の数は len(scan) から求める（720 点なら 0.5° ずつ）"""
     return np.radians(np.arange(len(scan)) * 360 / len(scan))
 
 

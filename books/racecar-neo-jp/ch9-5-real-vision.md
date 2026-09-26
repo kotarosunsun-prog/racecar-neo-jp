@@ -171,11 +171,11 @@ if __name__ == "__main__":
 ```text
   DRIVE　見えている時間 0.00 秒　標識なし
 STOP へ
-  STOP　見えている時間 0.30 秒　Detection(class_id='stop sign', score=0.83, bbox=(521, 200, 68, 68))
-  STOP　見えている時間 1.03 秒　Detection(class_id='stop sign', score=0.87, bbox=(534, 200, 72, 72))
+  STOP　見えている時間 0.30 秒　Detection(class_id='stop sign', score=0.83, bbox=(523, 200, 68, 68))
+  STOP　見えている時間 1.03 秒　Detection(class_id='stop sign', score=0.87, bbox=(535, 200, 72, 72))
   STOP　見えている時間 1.90 秒　Detection(class_id='stop sign', score=0.72, bbox=(535, 200, 72, 72))
 PASS へ
-  PASS　見えている時間 2.63 秒　Detection(class_id='stop sign', score=0.89, bbox=(538, 200, 73, 73))
+  PASS　見えている時間 2.63 秒　Detection(class_id='stop sign', score=0.89, bbox=(539, 200, 73, 73))
 ```
 
 5 回ずつ（まちがった答えの出方を変えて）走らせた結果は、次のとおりです。

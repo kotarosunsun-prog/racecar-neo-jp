@@ -3,7 +3,7 @@ title: "9-1 シミュレータから実機へ"
 free: true
 ---
 
-第1章〜第8章では、シミュレータの中の車を動かしてきました。同じ `racecar_core` の命令は、実機でもそのまま使えます。ただ、実機は、ぶつかれば壊れ、人がけがをすることもあります。センサの点の数や、速さの上限など、シミュレータとちがうところもあります。この回では、実機でプログラムを動かす手順と、シミュレータとのちがいをまとめ、センサの値を確かめるプログラムを作ります。
+第1章〜第8章では、シミュレータの中の車を動かしてきました。同じ `racecar_core` の命令は、実機でもそのまま使えます。ただ、実機は、ぶつかれば壊れ、人がけがをすることもあります。速さの上限や、使えるセンサなど、シミュレータとちがうところもあります。この回では、実機でプログラムを動かす手順と、シミュレータとのちがいをまとめ、センサの値を確かめるプログラムを作ります。
 
 ## ① この回でできるようになること
 
@@ -50,7 +50,7 @@ python3 real_check.py
 | 車が動く条件 | プログラムのモードなら、いつでも | RB を押している間だけ | 2-4 |
 | `set_max_speed()` のはじめの値 | 0.25 | 0.50 | この回 |
 | `update()` の回数 | 1 秒に約 60 回 | 1 秒に約 60 回（おくれることがある） | この回 |
-| LIDAR の点の数 | 720 点（0.5° ごと） | 約 1080 点（約 0.33° ごと） | 9-3 |
+| LIDAR の点の数 | 720 点（0.5° ごと） | 同じ | 2-3 |
 | LIDAR で測れない物 | ほとんどない | ガラス・鏡・黒い物 | 9-3 |
 | IMU の軸の向き | シミュレータ独自 | 実機のセンサの向き | 5-5 |
 | バッテリーの電圧・電流、車輪の速さ | 0.0 | 使える | 9-2・9-4 |
@@ -119,7 +119,7 @@ def update_slow():
     global frames, dt_max
     scan = rc.lidar.get_samples()
     n = len(scan)
-    front = rc_utils.get_lidar_average_distance(scan, 0)        # 正面（角度で指定するので、点の数によらない）
+    front = rc_utils.get_lidar_average_distance(scan, 0)        # 正面（0° のまわりの平均）
     right = rc_utils.get_lidar_average_distance(scan, 90)
     zeros = int((scan == 0).sum())                               # 測れなかった点の数
     image = rc.camera.get_color_image()
@@ -140,7 +140,7 @@ if __name__ == "__main__":
     rc.go()
 ```
 
-- `rc_utils.get_lidar_average_distance(scan, 0)` のように、角度で距離を読みます。点の数がちがっても、正しい向きを見ます（9-3）
+- `rc_utils.get_lidar_average_distance(scan, 0)` のように、角度で距離を読みます。1 点だけでなく、そのまわりの点の平均なので、ばらつきに強くなります（5-3）
 - `hasattr(rc, "vision")` は、「`rc` に `vision` があるか」を調べます。シミュレータの `rc` には `vision` がないので、そのまま `rc.vision` と書くとエラーになります
 - `frames` と `dt_max` で、1 秒に `update()` が何回呼ばれたかと、いちばん長かった 1 コマの時間を数えます
 
@@ -152,14 +152,14 @@ LIDAR 720 点（1 点 0.50°、測れない点 0）　正面 607 cm　右 76 cm
   カメラ 640×480　電圧 0.00 V　車輪 0.00 m/秒　見つけた物 （rc.vision なし）
   update() 60 回/秒（いちばん長いコマ 17 ミリ秒）
 （実機に近い設定）
-LIDAR 1080 点（1 点 0.33°、測れない点 0）　正面 603 cm　右 75 cm
+LIDAR 720 点（1 点 0.50°、測れない点 0）　正面 607 cm　右 75 cm
   カメラ 640×480　電圧 8.05 V　車輪 0.00 m/秒　見つけた物 0 個
   update() 60 回/秒（いちばん長いコマ 17 ミリ秒）
 ```
 
 実機で動かしたら、次のことを確かめましょう。
 
-1. LIDAR の点の数が 1080 前後か。正面と右の距離が、巻き尺で測った距離と合っているか（ずれていたら、ガラスや黒い物がないか。9-3）
+1. LIDAR の点の数が 720 か。正面と右の距離が、巻き尺で測った距離と合っているか（ずれていたら、ガラスや黒い物がないか。9-3）
 2. 測れない点が、ふだんより多すぎないか
 3. 電圧が、満充電の 2S のバッテリーなら 8 V 前後か（9-2）
 4. `update()` が 1 秒に 60 回近くか。いちばん長いコマが、大きくなりすぎていないか
@@ -223,5 +223,6 @@ $0.8 \times 0.12 = 0.096$ m、約 10 cm です。
 - `set_max_speed()` のはじめの値（シミュレータ 0.25、実機 0.50）と、`speed` に上限をかけること：同じく `drive.py`・`real/drive_real.py`
 - 実機に `rc.vision` があり、シミュレータにないこと：同じく `real/racecar_core_real.py`・`simulation/racecar_core_sim.py`
 - RB の関所：[racecar_neo_ros2_driver](https://github.com/MITRacecarNeo/racecar_neo_ros2_driver)（GPL-3.0）の README（Autonomy gate）
+- `rc.drive`・`rc.lidar`・`rc.physics`・`rc.vision`・`rc.telemetry` などの関数の説明（関数の定義集）：[racecar-neo-library documentation, Modules](https://mitracecarneo.github.io/racecar-neo-library/modules/index.html)
 
 `real_check.py` は、この本で作ったものです。表示の例は、この本で作った説明用の簡単なモデル（上から見た2次元の車と壁、LIDAR の計算）によるもので、実機の値ではありません。ドライバとライブラリは更新が続いているので、操作方法は変わることがあります。

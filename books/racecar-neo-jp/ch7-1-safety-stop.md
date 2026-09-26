@@ -41,7 +41,7 @@ $$
 ```python
 def lidar_angles(scan):
     """LIDAR の各点の角度（ラジアン）。0 が正面、時計回り。
-    点の数は len(scan) から求める（シミュレータは 720 点、実機は 1080 点。9-3）"""
+    点の数は len(scan) から求める（720 点なら 0.5° ずつ）"""
     return np.radians(np.arange(len(scan)) * 360 / len(scan))
 
 
@@ -56,7 +56,7 @@ def distance_ahead(scan):
     return float(forward[inside].min())
 ```
 
-- `lidar_angles()` は、LIDAR の点の数（`len(scan)`）から、各点の角度を求めます。シミュレータは 720 点ですが、実機は 1080 点なので（9-3）、720 と決めつけて書かないようにしています
+- `lidar_angles()` は、LIDAR の点の数（`len(scan)`）から、各点の角度を求めます。720 点なら、0 番が 0°、1 番が 0.5°、…、719 番が 359.5° です
 - NumPy の配列の計算（5-7）で、すべての点をまとめて計算しています。`scan * np.cos(angles)` は、点それぞれの「前向き」の配列です
 - `inside` は、条件に合う点が `True` になる配列です。`&` は「かつ」です。0.0（測れなかった点）と、後ろ（前向きが負）の点は、はじめから入れません
 - `forward[inside]` で、帯の中の点の「前向き」だけを取り出して、いちばん小さい値を返します
@@ -192,7 +192,7 @@ STOP_PER_SPEED = 60.0  # speed 1.0 あたり、止まるのに必要な距離（
 
 def lidar_angles(scan):
     """LIDAR の各点の角度（ラジアン）。0 が正面、時計回り。
-    点の数は len(scan) から求める（シミュレータは 720 点、実機は 1080 点。9-3）"""
+    点の数は len(scan) から求める（720 点なら 0.5° ずつ）"""
     return np.radians(np.arange(len(scan)) * 360 / len(scan))
 
 
